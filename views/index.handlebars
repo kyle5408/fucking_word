@@ -1,0 +1,73 @@
+<link rel="stylesheet" href="./public/index.css">
+
+
+
+<div class="container">
+  <div style="text-align:center" class="mt-5">
+    <h1>你想對誰說幹話?</h1>
+  </div>
+
+  <form method="POST" action="/">
+    <div class="form-check">
+      <div class="d-flex mt-5 justify-content-between">
+        <div class="card border-white d-flex justify-content-end" style="width: 18rem;">
+          <div style=" 30vw 30vh;">
+            <img src="https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5668/angry-developer.jpg"
+              class="card-img-top" alt="工程師">
+          </div>
+          <div class="form-check  d-flex justify-content-center text-align-center">
+            <input class="form-check-input" type="radio" name="option" id="engineer" value="engineer" {{#if
+              engineer}}checked="check" {{/if}}>
+            <label class="form-check-label" for="engineer">
+              工程師
+            </label>
+          </div>
+        </div>
+
+        <div class="card border-white d-flex justify-content-end" style="width: 18rem;">
+          <div style=" 30vw 30vh;">
+            <img src="https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5667/angry-designer.jpg"
+              class="card-img-top" alt="設計師">
+          </div>
+          <div class="form-check  d-flex justify-content-center">
+            <input class="form-check-input" type="radio" name="option" id="designer" value="designer" {{#if
+              designer}}checked="check" {{/if}}>
+            <label class="form-check-label" for="designer">
+              設計師
+            </label>
+          </div>
+        </div>
+
+        <div class="card border-white d-flex justify-content-end" style="width: 18rem;">
+          <div style=" 30vw 30vh;">
+            <img src="https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5669/angry-founder.jpg"
+              class="card-img-top" alt="創業家">
+          </div>
+          <div class="form-check  d-flex justify-content-center">
+            <input class="form-check-input" type="radio" name="option" id="entrepreneur" value="entrepreneur" {{#if
+              entrepreneur}}checked="check" {{/if}}>
+            <label class="form-check-label" for="entrepreneur">
+              創業家
+            </label>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+
+
+<div class="mt-5 container">
+  <button type="submit" class="btn btn-primary">產生幹話</button>
+  <div class="form-group">
+    <label for="exampleFormControlTextarea1"></label>
+    <textarea class="form-control" id="exampleFormControlTextarea1" rows="1"
+      style="font-size: 40px; font-weight: bold;">{{#if fuckingword}}{{fuckingword}}{{/if}}</textarea>
+
+  </div>
+
+</div>
+
+
+</form>
+
+</div>
